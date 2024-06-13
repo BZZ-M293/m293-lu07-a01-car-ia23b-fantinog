@@ -1,51 +1,65 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang='de'>
 <head>
-    <meta charset="UTF-8">
-    <title>Fahrzeug-Konfigurator</title>
+  <meta charset='UTF-8'>
+  <title>Fahrzeug-Konfigurator</title>
 
 </head>
 <body>
 
 <h1>Fahrzeug-Konfigurator</h1>
-<form action="https://it.bzz.ch/demo/formdata/index.php" method="post">
-    <fieldset>
-        <legend>Fahrzeugmodell</legend>
-        <label>Fahrzeugmodell:
-            <select name="Fahrzeugmodell[]" size="15" multiple>
-                <option>Ferrari</option>
-                <option>BMW</option>
-                <option>Audi</option>
-                <option>Bugatti</option>
-                <option>McLaren</option>
-                <option>VW</option>
-                <option>Opel</option>
-                <option>Ford</option>
-                <option>Skoda</option>
-                <option>Ford</option>
-                <option>Seat</option>
-                <option>Hyundai</option>
-                <option>Kia</option>
-                <option>Tesla</option>
-                <option>Porsche</option>
-            </select>
-        </label>
-    </fieldset>
-    <fieldset>
-        <legend>Lackfarben</legend>
-        <input type="radio" id="rot" name="Lackfarbe" value="Lackfarbe_rot">
-        <label for="rot"> Rot</label>
 
-        <input type="radio" id="blau" name="Lackfarbe" value="Lackfarbe_blau">
-        <label for="blau"> Blau</label>
+<form action='https://it.bzz.ch/demo/formdata/index.php' method='post'>
+  <!-- Fahrzeugmodelle -->
+  <fieldset>
+    <legend>Fahrzeugmodell</legend>
+    <select id='Fahrzeugmodell' name='Fahrzeugmodell' required>
+      <optgroup label='Kompaktwagen'>
+        <option value='A-Klasse'>A-Klasse</option>
+        <option value='B-Klasse'>B-Klasse</option>
+        <option value='CLA'>CLA</option>
+        <option value='GLA'>GLA</option>
+      </optgroup>
+      <optgroup label='Limousinen und T-Modelle'>
+        <option value='C-Klasse'>C-Klasse</option>
+        <option value='E-Klasse'>E-Klasse</option>
+        <option value='S-Klasse'>S-Klasse</option>
+        <option value='CLS'>CLS</option>
+      </optgroup>
+      <optgroup label='SUVs und Offroader'>
+        <option value='G-Klasse'>G-Klasse</option>
+        <option value='GLB'>GLB</option>
+        <option value='GLC'>GLC</option>
+        <option value='GLE'>GLE</option>
+        <option value='GLS'>GLS</option>
+      </optgroup>
+      <optgroup label='Sportwagen'>
+        <option value='AMG GT'>AMG GT</option>
+      </optgroup>
+      <optgroup label='Elektroautos'>
+        <option value='EQC'>EQC</option>
+        <option value='EQS'>EQS</option>
+      </optgroup>
+    </select>
+  </fieldset>
 
-        <input type="radio" id="gruen" name="Lackfarbe" value="Lackfarbe_gruen">
-        <label for="gruen"> Grün</label>
+  <!-- Lackfarben -->
+  <fieldset>
+    <legend>Lackfarbe</legend>
+    <input id='Rot' name='Lackfarbe' type='radio' value='Rot'>
+    <label for='Rot'>Rot</label><br>
+    <input id='Blau' name='Lackfarbe' type='radio' value='Blau'>
+    <label for='Blau'>Blau</label><br>
+    <input id='Grün' name='Lackfarbe' type='radio' value='Grün'>
+    <label for='Grün'>Grün</label><br>
+    <input id='Schwarz' name='Lackfarbe' type='radio' value='Schwarz'>
+    <label for='Schwarz'>Schwarz</label>
+  </fieldset>
 
-        <input type="radio" id="schwarz" name="Lackfarbe" value="Lackfarbe_schwarz">
-        <label for="schwarz"> Schwarz</label>
-    </fieldset>
+  <!-- Submit Button -->
+  <input type='submit' value='Konfiguration absenden'>
 </form>
+
 
 </body>
 </html>
